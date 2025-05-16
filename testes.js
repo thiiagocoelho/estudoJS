@@ -80,3 +80,70 @@
 
 //##############################################################
 
+//Calculadora usando funçoes
+
+// let num_escolhido = parseInt(prompt("diga o primeiro numero"))
+// let segundo_num_escolhido = parseInt(prompt("diga o segundo numero"))
+// let calculadora = parseInt(prompt("escolha uma operação: [1]somar [2]subtrair [3]multiplicar [4]dividir"));
+
+// function soma(a, b) {
+//     return a + b
+// }
+
+// function subtrair(a, b) {
+//     return a - b
+// }
+
+// function multiplicar(a, b) {
+//     return a * b
+// }
+
+// function dividir(a, b) {
+//     return a / b
+// }
+
+// if(calculadora === 1) {
+//     alert(`a soma é ${soma(num_escolhido, segundo_num_escolhido)}`)    
+// } else if (calculadora === 2) {
+//     alert(`a subtração é ${subtrair(num_escolhido, segundo_num_escolhido)}`)    
+// } else if (calculadora === 3) {
+//     alert(`a multiplicação é ${multiplicar(num_escolhido, segundo_num_escolhido)}`)
+// } else if (calculadora === 4) {
+//     alert(`a divisão é ${dividir(num_escolhido, segundo_num_escolhido)}`)    
+// }
+
+//##########################################################################
+
+//jogo numero secreto + atualizado
+
+// let secret_num = createRandomNumber();
+
+// function texto_tela(tag, texto) {
+//     let campo = document.querySelector(tag);
+//     campo.innerHTML = texto;
+// }
+
+// texto_tela('h1', 'Numero secreto');
+// texto_tela('p', 'Adivinhe o numero entre 1 a 20');
+
+// function verify_chute() {
+//     let chute = document.querySelector('input').value;
+//     console.log(secret_num)
+//     console.log(chute == secret_num ? 'acertou' : 'errou');
+
+//     if(chute == secret_num) {
+//         texto_tela('h1',"Acertou")
+//         texto_tela('p', 'Parabens')
+//     } else {
+//         let mensagem = `O numero secreto é ${secret_num > chute ? 'maior' : 'menor'} que ${chute}`
+//         texto_tela('p', mensagem);
+//         document.querySelector('input').value = '';
+//     }
+
+// }
+
+// function createRandomNumber() {
+//     return parseInt(Math.random() * 20) + 1;
+// }
+
+//#########################################################################
