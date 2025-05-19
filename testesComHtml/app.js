@@ -1,20 +1,3 @@
-// function verify_click_alert(){
-//     console.log("clicou")
-// }
-
-// function verify_click_prompt(){
-//     let cidade = prompt("fala uma cidade");
-//     alert(`voce esteve em ${cidade}`);
-// }
-
-
-// function verify_click_soma(){
-//     let num1 = parseInt(prompt("primeiro numero pra soma"));
-//     let num2 = parseInt(prompt("segundo numero pra soma"));
-    
-//     alert(`a soma é ${num1+num2}`);
-// }
-
 //imc = peso/(altura^2)
 
 function verify_click_IMC(){
@@ -39,11 +22,11 @@ function verify_click_fatorial(){
 }
 
 function calculo_fatorial(n){
-    let resultado = 1;
+    let resultado_fatorial = 1;
     for (let i = n; i > 1; i--) {
-        resultado *= i;
+        resultado_fatorial *= i;
     }
-    return resultado;
+    return resultado_fatorial;
 }
 
 //Cambio, 1 dolar é igual a 4.80 reais
@@ -92,4 +75,22 @@ function calculo_perimetro_retangulo(b, h) {
 
 function calculo_perimetro_circulo(raio){
     return pi*(raio**2)
+}
+
+//Tabuada
+
+//usuario digita um numero, depois vai mostrar a tabuada desse numero
+
+
+function verify_click_tabuada(){
+    let num = parseInt(prompt("Digite o numero"));
+    showTabuada(num);
+}
+
+function showTabuada(n){
+    for (let i = 1; i <= 10; i++) {
+        let resultado_tabuada = n * i;
+        console.log(`${n} x ${i} = ${resultado_tabuada}`);
+        alert(`${n} x ${i} = ${resultado_tabuada}`);
+    }
 }
