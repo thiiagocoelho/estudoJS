@@ -117,6 +117,7 @@
 //jogo numero secreto + atualizado
 
 // let secret_num = createRandomNumber();
+// let tentativas = 1;
 
 // function texto_tela(tag, texto) {
 //     let campo = document.querySelector(tag);
@@ -127,19 +128,20 @@
 // texto_tela('p', 'Adivinhe o numero entre 1 a 20');
 
 // function verify_chute() {
-//     let chute = document.querySelector('input').value;
-//     console.log(secret_num)
+//     let chute = parseInt(document.querySelector('input').value);
+//     console.log(secret_num);
 //     console.log(chute == secret_num ? 'acertou' : 'errou');
 
 //     if(chute == secret_num) {
-//         texto_tela('h1',"Acertou")
-//         texto_tela('p', 'Parabens')
+//         texto_tela('h1',"Acertou");
+//         let palavraTentativa = tentativas > 1 ? 'tentativas' : "tentativa";
+//         texto_tela('p', `Você descobriu com ${tentativas} ${palavraTentativa}`);
 //     } else {
-//         let mensagem = `O numero secreto é ${secret_num > chute ? 'maior' : 'menor'} que ${chute}`
+//         let mensagem = `O numero secreto é ${secret_num > chute ? 'maior' : 'menor'} que ${chute}`;
 //         texto_tela('p', mensagem);
 //         document.querySelector('input').value = '';
 //     }
-
+//     tentativas++;
 // }
 
 // function createRandomNumber() {
