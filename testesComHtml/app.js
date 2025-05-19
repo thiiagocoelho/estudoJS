@@ -62,17 +62,34 @@ function calculo_cambio(real, dolar){
     return dolar*real
 }
 
-//Perimetro do retangulo p = 2(b + h)
+//Perimetros
+
+let pi = 3.14
 
 function verify_click_perimetro() {
-    let base = parseFloat(prompt("Digite a base do retangulo"));
-    let altura = parseFloat(prompt("Digite a altura do retangulo"));
-    let perimetro = calculo_perimetro(base, altura);
-    console.log(perimetro);
-    alert(`O perimetro do retangulo é ${perimetro}`);
+    let forma = prompt("Que forma você deseja calcular o perimetro? 1[Retangulo] 2[Circulo]")
+    forma == 1 ? mensagem_retangulo() : mensagem_circulo();
 }
 
-function calculo_perimetro(b, h) {
+function mensagem_circulo(){
+    let valorRaio = parseFloat(prompt("Digite o valor do raio"));
+    let perimetro_circulo = calculo_perimetro_circulo(valorRaio);
+    console.log(perimetro_circulo);
+    alert(`O perimetro do circulo é ${perimetro_circulo}`);
+}
+
+function mensagem_retangulo() {
+    let base = parseFloat(prompt("Digite a base do retangulo"));
+    let altura = parseFloat(prompt("Digite a altura do retangulo"));
+    let perimetro_retangulo = calculo_perimetro_retangulo(base, altura);
+    console.log(perimetro_retangulo);
+    alert(`O perimetro do retangulo é ${perimetro_retangulo}`);    
+}
+
+function calculo_perimetro_retangulo(b, h) {
     return 2*(b + h);
-    
+}
+
+function calculo_perimetro_circulo(raio){
+    return pi*(raio**2)
 }
