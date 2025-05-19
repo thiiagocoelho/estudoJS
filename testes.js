@@ -124,8 +124,12 @@
 //     campo.innerHTML = texto;
 // }
 
-// texto_tela('h1', 'Numero secreto');
-// texto_tela('p', 'Adivinhe o numero entre 1 a 20');
+// function mensagemInicial(){
+//     texto_tela('h1', 'Numero secreto');
+//     texto_tela('p', 'Adivinhe o numero entre 1 a 20');
+// }
+
+// mensagemInicial();
 
 // function verify_chute() {
 //     let chute = parseInt(document.querySelector('input').value);
@@ -136,6 +140,7 @@
 //         texto_tela('h1',"Acertou");
 //         let palavraTentativa = tentativas > 1 ? 'tentativas' : "tentativa";
 //         texto_tela('p', `Você descobriu com ${tentativas} ${palavraTentativa}`);
+//         document.getElementById('reiniciar').removeAttribute('disabled');
 //     } else {
 //         let mensagem = `O numero secreto é ${secret_num > chute ? 'maior' : 'menor'} que ${chute}`;
 //         texto_tela('p', mensagem);
@@ -147,5 +152,18 @@
 // function createRandomNumber() {
 //     return parseInt(Math.random() * 20) + 1;
 // }
+
+// function limparChute(){
+//     chute = document.querySelector('input');
+//     chute.value = '';
+// }
+
+// function newGame(){
+//     secret_num = createRandomNumber();
+//     limparChute();
+//     tentativas = 1;
+//     mensagemInicial();
+//     document.getElementById('reiniciar').setAttribute('disabled', true);
+//}
 
 //#########################################################################
