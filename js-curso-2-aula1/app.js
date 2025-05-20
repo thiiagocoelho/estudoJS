@@ -1,4 +1,5 @@
-let secret_num_anteriores = []
+let secret_num_lista = []
+let num_max = 20;
 let secret_num = createRandomNumber();
 let tentativas = 1;
 
@@ -34,13 +35,18 @@ function verify_chute() {
 }
 
 function createRandomNumber() {
-    let secret_num = parseInt(Math.random() * 20) + 1;
-    if (secret_num_anteriores.includes(secret_num)){
+    let secret_num = parseInt(Math.random() * num_max) + 1;
+    let qntd_lista = secret_num_lista.length;
+    if (qntd_lista == num_max){
+        secret_num_lista = [];
+    }
+
+    if (secret_num_lista.includes(secret_num)){
         return createRandomNumber();
     } else {
-        secret_num_anteriores.push(secret_num);
-        console.log(secret_num_anteriores)
-        return secret_num
+        secret_num_lista.push(secret_num);
+        console.log(secret_num_lista);
+        return secret_num;
     }
 }
 

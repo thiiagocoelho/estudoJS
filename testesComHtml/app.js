@@ -94,3 +94,13 @@ function showTabuada(n){
         alert(`${n} x ${i} = ${resultado_tabuada}`);
     }
 }
+
+//testes de listas
+
+let linguagens = ['JavaScript','C','C++', 'Kotlin', 'Python'];
+linguagens.push('Java, Ruby, GoLang');
+console.log(linguagens);
+
+console.log(linguagens[0]);
+console.log(linguagens[1]);
+console.log(linguagens[7]); 
